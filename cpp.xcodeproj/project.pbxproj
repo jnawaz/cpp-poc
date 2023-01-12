@@ -14,6 +14,10 @@
 		91054894296F8427007D4BC2 /* cppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91054893296F8427007D4BC2 /* cppTests.swift */; };
 		9105489E296F8427007D4BC2 /* cppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9105489D296F8427007D4BC2 /* cppUITests.swift */; };
 		910548A0296F8427007D4BC2 /* cppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9105489F296F8427007D4BC2 /* cppUITestsLaunchTests.swift */; };
+		910548BF296F91E2007D4BC2 /* Math.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 910548BD296F91E2007D4BC2 /* Math.cpp */; };
+		910548C2296F924B007D4BC2 /* MathWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 910548C1296F924B007D4BC2 /* MathWrapper.mm */; };
+		910548C7296F93B5007D4BC2 /* HelloWorld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 910548C4296F93B5007D4BC2 /* HelloWorld.cpp */; };
+		910548C8296F93B5007D4BC2 /* HelloWorldWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 910548C6296F93B5007D4BC2 /* HelloWorldWrapper.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,16 @@
 		91054899296F8427007D4BC2 /* cppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9105489D296F8427007D4BC2 /* cppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cppUITests.swift; sourceTree = "<group>"; };
 		9105489F296F8427007D4BC2 /* cppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		910548B3296F8CA9007D4BC2 /* cpp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "cpp-Bridging-Header.h"; sourceTree = "<group>"; };
+		910548BD296F91E2007D4BC2 /* Math.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Math.cpp; sourceTree = "<group>"; };
+		910548BE296F91E2007D4BC2 /* Math.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Math.hpp; sourceTree = "<group>"; };
+		910548C0296F923B007D4BC2 /* MathWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MathWrapper.h; sourceTree = "<group>"; };
+		910548C1296F924B007D4BC2 /* MathWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MathWrapper.mm; sourceTree = "<group>"; };
+		910548C3296F93B5007D4BC2 /* HelloWorldWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HelloWorldWrapper.h; path = HelloWorld/HelloWorldWrapper.h; sourceTree = "<group>"; };
+		910548C4296F93B5007D4BC2 /* HelloWorld.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HelloWorld.cpp; path = HelloWorld/HelloWorld.cpp; sourceTree = "<group>"; };
+		910548C5296F93B5007D4BC2 /* HelloWorld.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = HelloWorld.hpp; path = HelloWorld/HelloWorld.hpp; sourceTree = "<group>"; };
+		910548C6296F93B5007D4BC2 /* HelloWorldWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = HelloWorldWrapper.mm; path = HelloWorld/HelloWorldWrapper.mm; sourceTree = "<group>"; };
+		910548C9296F93F9007D4BC2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +88,7 @@
 		91054876296F8426007D4BC2 = {
 			isa = PBXGroup;
 			children = (
+				910548C9296F93F9007D4BC2 /* README.md */,
 				91054881296F8426007D4BC2 /* cpp */,
 				91054892296F8427007D4BC2 /* cppTests */,
 				9105489C296F8427007D4BC2 /* cppUITests */,
@@ -94,10 +109,13 @@
 		91054881296F8426007D4BC2 /* cpp */ = {
 			isa = PBXGroup;
 			children = (
+				910548BC296F91C5007D4BC2 /* cppMath */,
 				91054882296F8426007D4BC2 /* cppApp.swift */,
 				91054884296F8426007D4BC2 /* ContentView.swift */,
+				910548B8296F8CDA007D4BC2 /* HelloWorld */,
 				91054886296F8427007D4BC2 /* Assets.xcassets */,
 				91054888296F8427007D4BC2 /* Preview Content */,
+				910548B3296F8CA9007D4BC2 /* cpp-Bridging-Header.h */,
 			);
 			path = cpp;
 			sourceTree = "<group>";
@@ -125,6 +143,28 @@
 				9105489F296F8427007D4BC2 /* cppUITestsLaunchTests.swift */,
 			);
 			path = cppUITests;
+			sourceTree = "<group>";
+		};
+		910548B8296F8CDA007D4BC2 /* HelloWorld */ = {
+			isa = PBXGroup;
+			children = (
+				910548C4296F93B5007D4BC2 /* HelloWorld.cpp */,
+				910548C5296F93B5007D4BC2 /* HelloWorld.hpp */,
+				910548C3296F93B5007D4BC2 /* HelloWorldWrapper.h */,
+				910548C6296F93B5007D4BC2 /* HelloWorldWrapper.mm */,
+			);
+			name = HelloWorld;
+			sourceTree = "<group>";
+		};
+		910548BC296F91C5007D4BC2 /* cppMath */ = {
+			isa = PBXGroup;
+			children = (
+				910548BD296F91E2007D4BC2 /* Math.cpp */,
+				910548BE296F91E2007D4BC2 /* Math.hpp */,
+				910548C0296F923B007D4BC2 /* MathWrapper.h */,
+				910548C1296F924B007D4BC2 /* MathWrapper.mm */,
+			);
+			path = cppMath;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +235,7 @@
 				TargetAttributes = {
 					9105487E296F8426007D4BC2 = {
 						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
 					};
 					9105488E296F8427007D4BC2 = {
 						CreatedOnToolsVersion = 14.2;
@@ -257,8 +298,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				910548C7296F93B5007D4BC2 /* HelloWorld.cpp in Sources */,
+				910548C8296F93B5007D4BC2 /* HelloWorldWrapper.mm in Sources */,
+				910548C2296F924B007D4BC2 /* MathWrapper.mm in Sources */,
 				91054885296F8426007D4BC2 /* ContentView.swift in Sources */,
 				91054883296F8426007D4BC2 /* cppApp.swift in Sources */,
+				910548BF296F91E2007D4BC2 /* Math.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +459,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"cpp/Preview Content\"";
@@ -433,6 +479,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ZACHIT.cpp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "cpp/cpp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -443,6 +491,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"cpp/Preview Content\"";
@@ -462,6 +511,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ZACHIT.cpp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "cpp/cpp-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

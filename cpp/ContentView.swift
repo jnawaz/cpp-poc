@@ -8,12 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Button {
+                print(MathWrapper().addTwoNumbers(5, 7))
+            } label: {
+                Text("Invoke c++ function")
+            }
+            .border(.black, width: 1.0)
+            .padding()
+
         }
         .padding()
     }
